@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "36712379-5896-4437-b908-2c4317187446",
+		"name": "Laravel-Vue-Test-ToDo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTU3NzkwOTYsImV4cCI6MTY1NTc4MjY5NiwibmJmIjoxNjU1Nzc5MDk2LCJqdGkiOiJScVlWZWhJeFZxRk5hYUJPIiwic3ViIjo4LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lUdI7jxPdaWSJfVSQyJaZP7m7fsRO5w-ZfVqbSFpdQg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				},
+				"description": "get tasks model "
+			},
+			"response": []
+		},
+		{
+			"name": "auth login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"willy.walter@example.org\",\n    \"password\": \"password\"\n}"
+				},
+				"url": {
+					"raw": "localhost/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Login JWT Laravel api"
+			},
+			"response": []
+		},
+		{
+			"name": "Task Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTU3NzkwOTYsImV4cCI6MTY1NTc4MjY5NiwibmJmIjoxNjU1Nzc5MDk2LCJqdGkiOiJScVlWZWhJeFZxRk5hYUJPIiwic3ViIjo4LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lUdI7jxPdaWSJfVSQyJaZP7m7fsRO5w-ZfVqbSFpdQg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "enviar email ao atualizar registro",
+							"type": "text"
+						},
+						{
+							"key": "completion_date",
+							"value": "2022-06-22",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Aberto",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				},
+				"description": "Store task by form-data inputs"
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTU3NzkwOTYsImV4cCI6MTY1NTc4MjY5NiwibmJmIjoxNjU1Nzc5MDk2LCJqdGkiOiJScVlWZWhJeFZxRk5hYUJPIiwic3ViIjo4LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lUdI7jxPdaWSJfVSQyJaZP7m7fsRO5w-ZfVqbSFpdQg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"criar CRUD de tarefas\",\n    \"completion_date\": \"2022-06-20\",\n    \"status\": \"Concluído\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/api/tasks/2",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"2"
+					]
+				},
+				"description": "put update task by raw text type json"
+			},
+			"response": []
+		},
+		{
+			"name": "Get tasks by logged user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTU3ODQ0NjEsImV4cCI6MTY1NTc4ODA2MSwibmJmIjoxNjU1Nzg0NDYxLCJqdGkiOiJqd3c4SmRwcFRZdTJBVTc5Iiwic3ViIjo4LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dx73rxVWLRCvHAdDanaqpPCcwcq344D50aoYDUgWpBY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/tasks/get_all_by_user/list",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"get_all_by_user",
+						"list"
+					]
+				},
+				"description": "Get list of tasks by logged user"
+			},
+			"response": []
+		},
+		{
+			"name": "Update status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTU4MDQ4MTUsImV4cCI6MTY1NTgwODQxNSwibmJmIjoxNjU1ODA0ODE1LCJqdGkiOiI1M1VXSFRWMVNTbGRaNzhnIiwic3ViIjo4LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.4NWKGiib9BzcdZVo6Gjgi5vj7PPWEW_fV-9z9Pkxjk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"Concluído\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/api/tasks/2/update_status",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"2",
+						"update_status"
+					]
+				},
+				"description": "Post for update only status of task"
+			},
+			"response": []
+		}
+	]
+}
