@@ -17,7 +17,8 @@ Pequena aplicação REST API com laravel 8 e FRONTEND com Vue consumindo a api c
 2. ``` $ docker-compose up -d ```
 3. ``` $ docker-compose exec app bash ```
 4. ``` $ php artisan key:generate ```
-5. ``` $ php artisan optimize:clear ```
+5. ``` $ php artisan jwt:secret ```
+6. ``` $ php artisan optimize:clear ```
 
 
 
@@ -43,22 +44,6 @@ php artisan migrate:fresh --seed
 ```
 
 ### Teste o acesso em http://localhost/
-
-```
-php artisan key:generate
-```
-
-```
-php artisan jwt:secret
-```
-
-```
-php artisan cache:clear
-```
-
-```
-php artisan config:clear
-```
 
 
 ## Esta disponível o arquivo para api no postman na raiz do projeto!
