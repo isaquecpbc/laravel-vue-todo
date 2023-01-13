@@ -1,0 +1,8 @@
+var _sf_async_config={uid:8211,domain:"cloudsigma.com",useCanonical:true};(function(){function loadChartbeat(){window._sf_endpt=(new Date()).getTime();var e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('type','text/javascript');e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');document.body.appendChild(e);};var oldonload=window.onload;window.onload=(typeof window.onload!='function')?loadChartbeat:function(){oldonload();loadChartbeat();};})();(function(){function gqp(name){name=name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");var regexS="[\\?&]"+name+"=([^&#]*)";var regex=new RegExp(regexS);var results=regex.exec(window.location.href);if(results==null)
+return "";else
+return results[1];}
+function setCookie(c_name,value,exdays){var exdate=new Date();exdate.setDate(exdate.getDate()+exdays);var c_value=escape(value)+
+((exdays==null)?"":"; expires="+exdate.toUTCString())+
+";domain=cloudsigma.com;path=/";document.cookie=c_name+"="+c_value;}
+var affil_id=gqp("affid");var offer_id=gqp("offid");var affil_sub=gqp("affsub");if(affil_id!=""&&offer_id!=""){if(affil_sub!=""){setCookie("__cs_has_offers",affil_id+"-"+offer_id+"-"+affil_sub,60)}
+else{setCookie("__cs_has_offers",affil_id+"-"+offer_id,60)}}})();window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set._.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');$.src='//v2.zopim.com/?rMRKK04e7xJotucH3rQ4oQRguLlhf9wj';z.t=+new Date;$.type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');$zopim(function(){})

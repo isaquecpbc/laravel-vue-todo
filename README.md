@@ -29,15 +29,36 @@ Pequena aplicação REST API com laravel 8 e FRONTEND com Vue consumindo a api c
 3. digite a senha "laravel_web"
 4. ``` $ show databases; ``` (verifique se a tabela laravel_web)
 5. agora vamos colocar a senha e usuario igual ao arquivo .env
-6. ``` $ GRANT ALL ON laravel_web.* TO 'laraveldocker'@'%' IDENTIFIED BY 'your_strong_laravel_docker_password'; ```
+6. ``` $ GRANT ALL ON laravel_web.* TO 'laravel_web_user'@'%' IDENTIFIED BY 'laravel_pass'; ```
 7. ``` $ FLUSH PRIVILEGES; ``` (salvar user)
 
 #### Para popular o banco de dados:
+
+```
+$ docker-compose exec app bash 
+```
 
 ```
 php artisan migrate:fresh --seed
 ```
 
 ### Teste o acesso em http://localhost/
+
+```
+php artisan key:generate
+```
+
+```
+php artisan jwt:secret
+```
+
+```
+php artisan cache:clear
+```
+
+```
+php artisan config:clear
+```
+
 
 ## Esta disponível o arquivo para api no postman na raiz do projeto!
